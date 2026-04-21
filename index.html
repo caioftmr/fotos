@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio Marques | Fotografia de Campo</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --dark-brown: #1E140F;
+            --white: #FFFFFF;
+            --gold: #D4AF37;
+            --glass-bg: rgba(30, 20, 15, 0.85);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--dark-brown);
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--white);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Prevent scrolling as requested */
+            padding: 20px;
+        }
+
+        /* Centered Card - Zero Scroll Strategy */
+        .glass-card {
+            background: var(--glass-bg);
+            width: 100%;
+            max-width: 400px;
+            max-height: 90vh; /* Fits within viewport */
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 24px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Official Logo - Sized for Zero Scroll */
+        .logo-box {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        h1 {
+            font-family: 'Prata', serif;
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .sub-headline {
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        /* Buttons Container */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .nav-link i {
+            width: 18px;
+            height: 18px;
+            color: var(--gold);
+        }
+
+        .nav-link:hover {
+            background: var(--white);
+            color: var(--dark-brown);
+            border-color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .nav-link:hover i {
+            color: var(--dark-brown);
+        }
+
+        .nav-link.primary {
+            background: var(--white);
+            color: var(--dark-brown);
+            border-color: var(--white);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link.primary i {
+            color: var(--dark-brown);
+        }
+
+        .footer {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.3;
+            font-weight: 500;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            width: 100%;
+        }
+
+        /* Ultra-mobile Otimization */
+        @media (max-height: 600px) {
+            .glass-card { padding: 25px 20px; }
+            .logo-box { width: 80px; margin-bottom: 10px; }
+            h1 { font-size: 1.8rem; }
+            .sub-headline { margin-bottom: 15px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glass-card">
+        <!-- Logo Oficial -->
+        <div class="logo-box">
+            <img src="logo.png" alt="Caio Marques Logo">
+        </div>
+
+        <h1>Caio Marques</h1>
+        <p class="sub-headline">Fotografia de Campo</p>
+
+        <div class="links-container">
+            <a href="https://www.fotto.com.br/treino-don-anibal-sabado-180426/e/321353/" class="nav-link primary">
+                <i data-lucide="camera"></i> Galeria de Fotos
+            </a>
+            <a href="https://wa.me/5551992705327?text=Olá%20Caio!%20Quero%20meu%20vídeo%20oficial%20da%20prova." class="nav-link">
+                <i data-lucide="video"></i> Solicitar Vídeo
+            </a>
+            <a href="https://wa.me/5551992705327?text=Olá%20Caio!%20Não%20consegui%20achar%20minhas%20fotos,%20pode%20me%20ajudar?" class="nav-link">
+                <i data-lucide="message-circle"></i> Suporte WhatsApp
+            </a>
+        </div>
+
+        <div class="footer">
+            Eternizando Tradições
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
